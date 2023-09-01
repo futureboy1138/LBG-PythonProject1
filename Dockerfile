@@ -1,11 +1,11 @@
-FROM python:3.9-alpine
+FROM python:3.11
 
 WORKDIR /app
 
 COPY . .
 
-RUN pip install flask
+RUN pip install -r requiremnts.txt
 
 EXPOSE 5000
 
-ENTRYPOINT ["python","app.py"]
+ENTRYPOINT ["python","lbg.py"]
